@@ -1,0 +1,54 @@
+{
+    "globals": {
+      "describe": true,
+      "before": true,
+      "it": true
+    },
+    "env": {
+      "commonjs": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": ["plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 12
+    },
+    "rules": {
+      "arrow-parens": "off",
+      "arrow-body-style": ["error", "as-needed"],
+      "prefer-arrow-callback": [
+        "error",
+        {
+          "allowNamedFunctions": true,
+          "allowUnboundThis": false
+        }
+      ],
+      "array-element-newline": [
+        "error",
+        {
+          "ArrayExpression": "consistent",
+          "ArrayPattern": { "minItems": 50 }
+        }
+      ],
+      //https://eslint.org/docs/rules/array-element-newline - Arrow Func format inline
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ],
+      "no-useless-return": "error",
+      "prefer-template": "error",
+      "no-template-curly-in-string": "error",
+      "curly": ["error", "multi"],
+      //https://eslint.org/docs/rules/function-call-argument-newline - Assinatura de métodos/func
+      "function-call-argument-newline": ["error", "consistent"],
+      //https://eslint.org/docs/rules/func-call-spacing - Espaçamento em chamadas de Função
+      "func-call-spacing": ["error", "never"],
+      "no-unused-expressions": "warn",
+      "no-unused-vars": "warn"
+    }
+  }
+  
